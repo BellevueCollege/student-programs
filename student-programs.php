@@ -37,7 +37,7 @@ add_action('add_meta_boxes', 'add_program_custom_meta_box');
 function add_program_custom_meta_box() {
 	add_meta_box(
 		'custom_meta_box', // $id
-		'Custom Meta Box', // $title
+		'Program Information', // $title
 		'show_program_custom_meta_box', // $callback
 		'programs', // $page
 		'normal', // $context
