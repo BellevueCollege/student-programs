@@ -95,8 +95,8 @@ $custom_program_meta_fields = array(
     array(
         'label'=> 'URL',
         'desc'  => 'Program Website',
-        'name'  => 'prgoram_url',
-        'id'    => 'prgoram_url',
+        'name'  => 'program_url',
+        'id'    => 'program_url',
         'type'  => 'text'
     ),
       array(
