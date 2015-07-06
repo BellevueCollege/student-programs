@@ -22,7 +22,7 @@ function create_programs_post_type() {
 				'menu_name' => 'Student Program Archive',
 			),
 			'public' => true,
-			'supports' => array( 'title', 'editor', 'comments','page-attributes',),
+			'supports' => array( 'title', 'editor', 'comments'),
 			'has_archive' => 'programs',
 			'capability_type' => 'page',
 			'rewrite' => array( 'slug' => "programs" ),
