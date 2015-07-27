@@ -4,7 +4,7 @@ Plugin Name: Student Programs
 Plugin URI: https://github.com/BellevueCollege/student-programs/
 Description: This plugin provides the user to create custom post for student programs for Bellevue college
 Author: Bellevue College Information Technology Services
-Version: 1.0.0.0
+Version: 1.0
 Author URI: http://www.bellevuecollege.edu
 */
 
@@ -28,8 +28,23 @@ function create_programs_post_type() {
 			'rewrite' => array( 'slug' => "programs" ),
 		)
 	);
+}
+
+function programs_rewrite_flush() {
+	/* First, we "add" the custom post type via the above written function.
+	 * Note: "add" is written with quotes, as CPTs don't get added to the DB,
+	 * They are only referenced in the post_type column with a post entry,
+	 * when you add a post of this CPT.
+	 */
+
+	create_programs_post_type();
+
+	/* ATTENTION: This is *only* done during plugin activation hook in this example!
+	 *You should *NEVER EVER* do this on every page load!!
+	 */
 	flush_rewrite_rules();
 }
+register_activation_hook( __FILE__, 'programs_rewrite_flush' );
 
 // Add the Meta Box
 add_action('add_meta_boxes', 'add_program_custom_meta_box');
