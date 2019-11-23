@@ -1,14 +1,7 @@
 # Student-Programs
 
-Student-Programs plugin provides a way to create a custom post's in a new section of wordpress dashboard.
-In addition to Title, description, attachments(using Add media) each post contains following custom meta fields
-- Program Contact Name
-- Program Contact Email
-- Program Contact Phone
-- Office Location
-- Office Hours
-- Link to Program website
-- Link to budget documentation
+The Student Programs plugin provides a custom post type for Student Run Programs.
+As of version 2, this plugin uses Advanced Custom Fields for field management. An import is included. 
 
 The templates for single and archive reside in mayflower theme.
 
